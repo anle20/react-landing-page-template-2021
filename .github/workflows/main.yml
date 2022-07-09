@@ -34,8 +34,6 @@ jobs:
         uses: dawidd6/action-ansible-playbook@v2
         with:
           # Required, playbook filepath
-          playbook: playbook.yml
-          # Optional, directory where playbooks live
-          directory: ./ansible
+          playbook: react-landing-page-template-2021/ansible/playbook.yml
           # Optional, SSH private key
           key: ${{secrets.AWS_PRIVATE_KEY}}
