@@ -34,5 +34,5 @@ jobs:
         run: |
           cd ansible
           ls
-          ansible-inventory --graph -i inventory/inventory_aws_ec2.yaml
+          ansible-inventory --graph -i inventory/inventory_aws_ec2.yml
           
