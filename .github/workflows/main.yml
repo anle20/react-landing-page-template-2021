@@ -31,7 +31,7 @@ jobs:
           sudo apt install ansible
           sudo apt install python3 -y
           sudo apt install python3-pip -y
-          sudo pip3 install boto3
+          sudo apt install python-boto3 -y
 
 
       # Runs a set of commands using the runners shell
