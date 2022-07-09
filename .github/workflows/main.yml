@@ -35,10 +35,10 @@ jobs:
           python3 --version
 
       - name: install pip
-        run:  sudo apt-get install python3.9-pip -y
+        run:  sudo apt-get install python3-pip -y
           
       - name: install bot3
-        run: sudo apt-get install python3.9-boto3
+        run: sudo apt-get install python3-boto3
       
       - name: update
         run: sudo apt-get update
