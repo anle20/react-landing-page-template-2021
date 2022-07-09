@@ -45,6 +45,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: run playbook
         run: |
+          python3 --version
           cd ansible
           ansible-inventory --graph
           
