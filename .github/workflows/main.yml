@@ -30,7 +30,9 @@ jobs:
         run: sudo apt-get install ansible
       
       - name: install python3
-        run: sudo apt-get install python3 -y
+        run: |
+          sudo apt-get install python3 -y
+          python3 --version
 
       - name: install pip
         run:  sudo apt-get install python3-pip -y
