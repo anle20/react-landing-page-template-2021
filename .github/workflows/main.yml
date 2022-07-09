@@ -38,6 +38,5 @@ jobs:
       - name: run playbook
         run: |
           cd ansible
-          ls
-          ansible --version
+          ansible-inventory --graph
           
