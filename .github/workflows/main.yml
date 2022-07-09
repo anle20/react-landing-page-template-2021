@@ -33,5 +33,5 @@ jobs:
       - name: run playbook
         run: |
           cd ansible
-          ansible-playbook playbook.yaml
+          ansible-inventory --graph -i inventory/inventory_aws_ec2.yml
           
