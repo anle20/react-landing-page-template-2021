@@ -1,0 +1,9 @@
+- name: Ansible Playbook for components setup in Trading servers
+  hosts: tag_Name_Worker
+  become: true
+
+
+  roles:
+    - role: react
+      vars_files:
+        - ./role/vars/main.yaml

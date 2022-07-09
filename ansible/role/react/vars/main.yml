@@ -1,0 +1,5 @@
+---
+# vars file for react
+git_repo_url: https://github.com/anle20/react-landing-page-template-2021.git
+repo_path: /home/ubuntu/react/
+repo_branch: main

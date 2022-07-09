@@ -1,0 +1,14 @@
+---
+plugin: aws_ec2
+regions:
+  - ap-southeast-1
+aws_access_key: AKIARP6QI3TH7W7IL36H
+aws_secret_key: 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
+keyed_groups:
+  - prefix: tag
+    key: tags
+include_filters:
+  - tag:Name:
+    - 'Worker'
+compose:
+  ansible_host: public_ip_address
