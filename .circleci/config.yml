@@ -18,6 +18,15 @@ jobs:
           root: ~/project
           paths:
             - .
+  
+  deploy:
+    executor: node/default
+    steps:
+      - attach_workspace:
+          at: ~/project
+      - run:
+          command: ls
+
 
 workflows:
   test_my_app:
