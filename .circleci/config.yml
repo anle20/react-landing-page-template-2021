@@ -17,12 +17,12 @@ jobs:
             sudo pip3 install boto3
             sudo apt-get install ansible
             pip install ansible
-            ansible --version
-            pip install awscliv2
           name: install ansible and aws cli
       - run:
           command: |
             cd ansible
+            sed -i '5s/this_is_fake/"$(aws_access_key)"' ./inventory/inventory_aws_ec2.yml
+            sed -i '6s/this_is_fake/"$(aws_secret_key)"' ./inventory/inventory_aws_ec2.yml
             ansible-inventory --graph
 
 
