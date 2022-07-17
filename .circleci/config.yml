@@ -15,6 +15,7 @@ jobs:
           name: Build app
       - run:
           command: |
+            ls
             pwd
             cd ..
             ls
