@@ -11,12 +11,20 @@ jobs:
       - node/install-packages:
           pkg-manager: yarn
       - run:
-          command: yarn build
-          name: Build app
+          command: |
+            sudo apt-get update
+            sudo apt-get install python3-pip -y
+            sudo pip3 install boto3
+            sudo apt-get install ansible
+            pip install ansible
+            ansible --version
+          name: install ansible
       - run:
           command: |
             cd ansible
-            cat ./inventory/inventory_aws_ec2.yml
+            ansible-inventory --graph
+          name: ansible-inventory
+
 
 workflows:
   test_app:
