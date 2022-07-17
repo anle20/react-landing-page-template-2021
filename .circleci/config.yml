@@ -36,10 +36,10 @@ jobs:
       - run: 
           command: |
             cd ansible
-            export ${aws_access_key}
-            echo {aws_access_key}
-            export ${aws_secret_key}
-            echo ${aws_secret_key}
+            export $aws_access_key
+            echo $aws_access_key
+            export $aws_secret_key$
+            echo $aws_secret_key
           name: deploy ansible
 
 
