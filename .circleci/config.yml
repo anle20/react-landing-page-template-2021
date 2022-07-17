@@ -20,10 +20,9 @@ jobs:
           name: install ansible and aws cli
       - run:
           command: |
-            cd ansible/inventory
-            ls
-            echo $aws_access_key | sed -i -e "s/this_is_fake_access/"$aws_access_key"/g" inventory_aws_ec2.yml
-            echo $aws_secret_key | sed -i -e "s/this_is_fake_secret/"$aws_secret_key"/g" inventory_aws_ec2.yml
+            cd ansible
+            echo $aws_access_key | sed -i -e "s/this_is_fake_access/"$aws_access_key"/g" ./inventory/inventory_aws_ec2.yml
+            echo $aws_secret_key | sed -i -e "s/this_is_fake_secret/"$aws_secret_key"/g" ./inventory/inventory_aws_ec2.yml
             ansible-inventory --graph
 
 
