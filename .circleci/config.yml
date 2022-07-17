@@ -21,6 +21,7 @@ jobs:
       - run:
           command: |
             cd ansible
+            ls
             sed -i '' -e "s/this_is_fake_access/"$aws_access_key"/g" ./inventory/inventory_aws_ec2.yml
             sed -i '' -e "s/this_is_fake_secret/"$aws_secret_key"/g" ./inventory/inventory_aws_ec2.yml
             ansible-inventory --graph
