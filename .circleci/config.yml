@@ -14,37 +14,25 @@ jobs:
           command: yarn build
           name: Build app
       - run:
-          command: ls
-      - persist_to_workspace:
-          root: ~/project
-          paths:
-            - .
+          command: |
+            pwd
+            cd ..
+            ls
   
   deploy:
     executor: python/default
     steps:
-      - attach_workspace:
-          at: ~/project
-      - run:
-          command: |
-            sudo apt-get update
-            sudo apt-get install python3-pip -y
-            sudo pip3 install boto3
-            pip install ansible
-            ansible --version
-          name: install ansible
       - run: 
           command: |
-            cd ansible
-            ansible-inventory --graph
+            echo aws_access_key_ansible = "$aws_access_key" >> "${BASH_ENV}"
+            echo aws_secret_key_ansible = "$aws_secret_key" >> "${BASH_ENV}"
+            echo $aws_access_key_ansible
+            echo $aws_secret_key_ansible
           name: deploy ansible
-
 
 workflows:
   test_my_app:
     jobs:
       - build_and_test
-      - deploy:
-          requires:
-            - build_and_test
+      - deploy
 
