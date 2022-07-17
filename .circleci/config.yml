@@ -15,8 +15,8 @@ jobs:
           name: Build app
       - run:
           command: |
-            cd ansible/inventory
-            cat inventory_aws_ec2.yml
+            cd ansible
+            cat ./inventory/inventory_aws_ec2.yml
 
 workflows:
   test_app:
