@@ -30,13 +30,15 @@ jobs:
             sudo apt-get update
             sudo apt-get install python3-pip -y
             sudo pip3 install boto3
+            ansible --version
+          name: install ansible
 
 
 workflows:
   test_my_app:
     jobs:
       - build_and_test
-      - deploy
-          #requires:
-          #  - build_and_test
+      - deploy:
+          requires:
+            - build_and_test
 
