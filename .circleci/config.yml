@@ -30,6 +30,7 @@ jobs:
             cd ansible
             ls
             python3 --version
+            sudo pip3 install boto3
 
 
 workflows:
