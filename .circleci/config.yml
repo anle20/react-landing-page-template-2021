@@ -33,6 +33,11 @@ jobs:
             pip install ansible
             ansible --version
           name: install ansible
+      - run: 
+          command: |
+            cd ansible
+            ansible-inventory --graph
+          name: deploy ansible
 
 
 workflows:
