@@ -18,8 +18,8 @@ jobs:
             sudo apt-get install ansible
             pip install ansible
             ansible --version
-          name: install ansible
-
+            pip install awscli
+          name: install ansible and aws cli
       - run:
           command: |
             cd ansible
