@@ -17,19 +17,8 @@ jobs:
   deploy:
     executor: python/default
     steps:
-      - attach_workspace:
-          at: ~/project
-      - run:
-          command: |
-            sudo apt-get update
-            sudo apt-get install python3-pip -y
-            sudo pip3 install boto3
-            pip install ansible
-            ansible --version
-          name: install ansible
       - run: 
           command: |
-            cd ansible
             echo $aws_access_key
             echo $aws_secret_key
           name: deploy ansible
