@@ -17,5 +17,11 @@ jobs:
           command: |
             cd ansible/inventory
             cat inventory_aws_ec2.yml
+
+workflows:
+  test_app:
+    jobs:
+      - build_and_test
+
             
 
