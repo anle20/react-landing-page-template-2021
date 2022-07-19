@@ -24,7 +24,7 @@ jobs:
             echo $aws_access_key | sed -i -e "s/this_is_fake_access/"$aws_access_key"/g" ./inventory/inventory_aws_ec2.yml
             echo $aws_secret_key | sed -i -e "s/this_is_fake_secret/"$aws_secret_key"/g" ./inventory/inventory_aws_ec2.yml
             ansible-inventory --graph
-            ansible-playbook playbook.yaml '--private-key=$ansible_pem'
+            echo $ansible_pem >> ansible-learn.cer | ansible-playbook playbook.yaml '--private-key=./ansible-learn.cer'
 
 
 workflows:
