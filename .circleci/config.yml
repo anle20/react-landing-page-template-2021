@@ -16,6 +16,7 @@ jobs:
   deploy:
     executor: python/default
     steps:
+      - checkout
       - add_ssh_keys:
           fingerprints:
             - 5e:2c:72:d8:db:4c:ec:d1:a8:a0:32:a1:2d:52:ed:ef
