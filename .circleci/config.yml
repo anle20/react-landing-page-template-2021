@@ -22,6 +22,7 @@ jobs:
             - 5e:2c:72:d8:db:4c:ec:d1:a8:a0:32:a1:2d:52:ed:ef
       - run:
           command: |
+            echo hello
             sudo apt-get update
             sudo apt-get install python3-pip -y
             sudo pip3 install boto3
