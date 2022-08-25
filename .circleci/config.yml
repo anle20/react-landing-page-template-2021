@@ -14,9 +14,10 @@ jobs:
       - run:
           command: yarn build
           name: Build app
-  aws-cli-cred-setup:
+  deploy:
     executor: aws-cli/default
     steps:
+      - checkout
       - aws-cli/setup:
           aws-access-key-id: aws_access_key
           aws-secret-access-key: aws_secret_key
