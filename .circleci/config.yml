@@ -24,7 +24,7 @@ jobs:
           aws-region: aws_region_name
       - run: |
           commit_hash=`git rev-parse HEAD`
-          echo "commit_hash"
+          echo $commit_hash
 
 workflows:
   test_app:
