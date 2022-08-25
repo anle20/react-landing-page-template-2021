@@ -21,6 +21,9 @@ jobs:
           aws-access-key-id: aws_access_key
           aws-secret-access-key: aws_secret_key
           aws-region: aws_region_name
+      - run: |
+          commit_hash=`git rev-parse HEAD`
+          echo "commit_hash"
 
 workflows:
   test_app:
