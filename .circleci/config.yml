@@ -29,5 +29,5 @@ jobs:
 workflows:
   test_app:
     jobs:
-      - aws-cli-cred-setup
+      - deploy
 
