@@ -1,6 +1,6 @@
 {
   "company": {
-    "name": "React landing page 2021",
+    "name": "React landing page 2022",
     "logo": "/assets/images/logo.png"
   },
   "navigation": [
@@ -41,7 +41,7 @@
     }
   },
   "product": {
-    "title": "React landing page 2021",
+    "title": "React landing page 2022",
     "items": [
       {
         "title": "A plug n play template",
