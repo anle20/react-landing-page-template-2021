@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /home/ubuntu/app/
+cd /home/ubuntu/app/react-landing-page-template-2021
 yarn
 yarn build
 yarn start
