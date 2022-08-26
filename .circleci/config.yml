@@ -24,7 +24,12 @@ jobs:
           aws-region: aws_region_name
       - run: |
           commit_hash=`git rev-parse HEAD`
-          echo $commit_hash
+          aws deploy create-deployment \
+            --application-name CodeDeployGitHubDemo-App \
+            --deployment-config-name CodeDeployDefault.OneAtATime \
+            --deployment-group-name CodeDeployGitHubDemo-DepGrp \
+            --description "My GitHub deployment demo" \
+            --github-location repository=anle20/react-landing-page-template-2021,commitId=$commit_hash
 
 workflows:
   test_app:
