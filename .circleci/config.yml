@@ -25,10 +25,10 @@ jobs:
       - run: |
           commit_hash=`git rev-parse HEAD`
           aws deploy create-deployment \
-            --application-name SimpleDemoApp \
+            --application-name CodeDeployGitHubDemo-App \
             --deployment-config-name CodeDeployDefault.OneAtATime \
-            --deployment-group-name SimpleDemoDG \
-            --description "Auto Scaling Group deployment demo" \
+            --deployment-group-name CodeDeployGitHubDemo-DepGrp \
+            --description "My GitHub deployment demo" \
             --github-location repository=anle20/react-landing-page-template-2021,commitId=$commit_hash
 
 workflows:
